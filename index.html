@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Packpartout - To help you pack for your trips!</title>
   </head>
   <body>
-    
+    <div id="head">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <!-- Navbar brand -->
+          <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">Packpartout</a>
+          </div>
+          <!-- Right side of navbar -->
+            <span class="nav navbar-nav navbar-right">
+              <p>To help you pack for your trip!</p>
+            </span>
+          </div> <!--Container close -->
+      </nav><!--Nav closes-->
+      <h1>Packpartout</h1>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.</h2>
+      <a href="#question-one" class="btn btn-primary btn-xl page-scroll">Let's plan your adventure!</a>
+    </div><!--Head div closes-->
+
+  <!--QUESTION ONE-->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <form id="destination-question">
+            <div id="question-one">
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="destination" value="" id="destination" placeholder="Where are you headed?">
+                <button type="button" name="button" id="start-quiz" class="btn btn-success">Get packing!</button>
+              </div><!--Form group close-->
+            </div><!--Question one close-->
+          </form>
+        </div><!--Col close for question one-->
+      </div><!--Row close-->
+
+    <!--QUESTION TWO-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="question-two">
+            <form id="trip-questions">
+              <div class="form-group">
+                <h2>What will the temperature be on your trip?</h2>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Hot
+                  </label>
+                  <label>
+                    <input type="checkbox"> Temperate
+                  </label>
+                  <label>
+                    <input type="checkbox"> Cold
+                  </label>
+                </div>
+              </div> <!--Form group close-->
+            </div><!--Question two close-->
+            <div class="question-three">
+              <div class="form-group">
+                <h2>What will the climate be on your trip?</h2>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Dry
+                  </label>
+                  <label>
+                    <input type="checkbox"> Humid
+                  </label>
+                  <label>
+                    <input type="checkbox"> Wet
+                  </label>
+                </div>
+              </div>
+            </div><!--Question three close-->
+            <div class="form-group">
+              <h2>How big is your bag?</h2>
+              <input type="radio" name="bag" id="small" value="small" class="radio-button">
+              <label for="small" class="small-bag">Small</label>
+              <input type="radio" name="bag" id="medium" value="medium" class="radio-button">
+              <label for="medium" class="medium-bag">Medium</label>
+              <input type="radio" name="bag" id="large" value="large" class="radio-button">
+              <label for="large" class="large-bag">Large</label>
+            </div>
+            <button type="submit" name="form-submit" id="form-submit">Bon Voyage!</button>
+          </form>
+        </div><!--Col close-->
+        <div class="col-md-6 result">
+          <!-- Populating list result  -->
+        </div>
+      </div><!--Row close-->
+    </div><!--Container close-->
   </body>
 </html>
