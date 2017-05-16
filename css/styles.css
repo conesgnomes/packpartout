@@ -1,0 +1,87 @@
+/*Global*/
+body {
+  text-align: center;
+}
+
+/*Navbar*/
+.navbar {
+  background-color: #000;
+  min-height: 40%;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar a:hover {
+  color: rgba(255, 255, 255, .5);
+  -o-transition:.9s;
+  -ms-transition:.9s;
+  -moz-transition:.9s;
+  -webkit-transition:.9s;
+  transition:.9s;
+}
+
+.navbar-brand {
+  color: #f0f0f0;
+  padding: 0 10%;
+  height: 40%;
+  line-height: 1.7em;
+  font-size: 4em;
+  letter-spacing: .03em;
+}
+.navbar-right {
+  color: #f0f0f0;
+  padding-right: 3%;
+  padding-top: 1.5%;
+  font-size: 1.5em;
+  letter-spacing: .03em;
+}
+
+/*Landing*/
+
+#landing {
+  /*background-color: #C0C0C0;*/
+  padding: 35% 10% 10% 10%;
+  color: #000;
+  width: 100%;
+  min-height: auto;
+  background-attachment: fixed;
+  background: url('https://github.com/avocadobravado/rose-intro-team-week-ideas/blob/master/background.png?raw=true') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#adventure-button {
+  font-size: 1.3em;
+  padding: 1.4%;
+  margin-top: 2%;
+}
+
+a:hover#adventure-button {
+  color: rgba(255, 255, 255, .4);
+  -o-transition:1.4s;
+  -ms-transition:1.4s;
+  -moz-transition:1.4s;
+  -webkit-transition:1.4s;
+  transition:1.4s;
+}
+
+/*Container*/
+.container {
+  margin-top: 3%;
+  margin-bottom: 6%
+}
+
+#start-quiz {
+  padding: 1.4%;
+}
+
+#start-quiz:hover {
+  color: rgba(255, 255, 255, .5);
+  -o-transition:1.2s;
+  -ms-transition:1.2s;
+  -moz-transition:1.2s;
+  -webkit-transition:1.2s;
+  transition:1.2s;
+}
