@@ -3,14 +3,24 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
-    <script src="js/bootstrap.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
+    <script>
+      $(document).ready(function(){
+        console.log("hello");
+        $("#adventure-button").click(function() {
+          $("html,body").animate({
+            scrollTop: $("#question-one").offset().top}, "slow");
+          });
+        });
+      </script>
     <title>Packpartout - To help you pack for your trips!</title>
   </head>
   <body>
     <div id="head">
-      <nav class="navbar navbar-fixed-top">
+      <nav class="navbar">
         <div class="container-fluid">
           <!-- Navbar brand -->
           <div class="navbar-header">
@@ -26,7 +36,7 @@
         <div class="text">
           <h1 id="subhead">Whether you're going around the world in 80 days or 8, Packpartout will help you plan your next adventure by suggesting what you'll need to pack.</h1>
           <div id="begin-button">
-            <a href="#question-one" class="btn btn-primary btn-xl page-scroll" id="adventure-button">Let's plan your adventure!</a>
+            <button href="#question-one" id="adventure-button">Let's plan your adventure!</button>
           </div>
           <br>
         </div>
@@ -44,7 +54,7 @@
               <br>
                 <input type="text" class="form-control input-lg" name="destination" value="" id="destination" placeholder="Where are you headed?">
                 <br>
-                <button type="button" name="button" id="start-quiz" class="btn btn-success">Get packing!</button>
+                <button type="button" name="button" id="start-quiz">Get packing!</button>
               </div><!--Form group close-->
             </div><!--Question one close-->
           </form>
@@ -98,7 +108,7 @@
               <input type="radio" name="bag" id="large" value="large" class="radio-button">
               <label for="large" class="large-bag">Large</label>
             </div>
-            <button type="submit" class="btn" name="form-submit" id="form-submit">Bon Voyage!</button>
+            <button type="submit" name="form-submit" id="form-submit">Bon Voyage!</button>
           </form>
         </div><!--Col close-->
         <div class="col-md-5 col-md-offset-1 result">
