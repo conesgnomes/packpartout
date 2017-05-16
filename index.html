@@ -22,9 +22,11 @@
             </span>
           </div> <!--Container close -->
       </nav><!--Nav closes-->
-      <h1>Packpartout</h1>
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.</h2>
-      <a href="#question-one" class="btn btn-primary btn-xl page-scroll">Let's plan your adventure!</a>
+      <div id="landing">
+            <h1>Whether you're going around the world in 80 days or 8, Packpartout will help you plan your next adventure by suggesting what you'll need to pack.</h1>
+            <a href="#question-one" class="btn btn-primary btn-xl page-scroll" id="adventure-button">Let's plan your adventure!</a>
+            <br>
+      </div><!--Landing close-->
     </div><!--Head div closes-->
 
   <!--QUESTION ONE-->
@@ -35,17 +37,19 @@
           <form id="destination-question">
             <div id="question-one">
               <div class="form-group">
+              <br>
                 <input type="text" class="form-control input-lg" name="destination" value="" id="destination" placeholder="Where are you headed?">
+                <br>
                 <button type="button" name="button" id="start-quiz" class="btn btn-success">Get packing!</button>
               </div><!--Form group close-->
             </div><!--Question one close-->
           </form>
         </div><!--Col close for question one-->
       </div><!--Row close-->
-
+      <br>
     <!--QUESTION TWO-->
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5 col-md-offset-1">
           <div class="question-two">
             <form id="trip-questions">
               <div class="form-group">
@@ -63,6 +67,7 @@
                 </div>
               </div> <!--Form group close-->
             </div><!--Question two close-->
+            <br>
             <div class="question-three">
               <div class="form-group">
                 <h2>What will the climate be on your trip?</h2>
@@ -79,6 +84,7 @@
                 </div>
               </div>
             </div><!--Question three close-->
+            <br>
             <div class="form-group">
               <h2>How big is your bag?</h2>
               <input type="radio" name="bag" id="small" value="small" class="radio-button">
@@ -88,10 +94,10 @@
               <input type="radio" name="bag" id="large" value="large" class="radio-button">
               <label for="large" class="large-bag">Large</label>
             </div>
-            <button type="submit" name="form-submit" id="form-submit">Bon Voyage!</button>
+            <button type="submit" class="btn" name="form-submit" id="form-submit">Bon Voyage!</button>
           </form>
         </div><!--Col close-->
-        <div class="col-md-6 result">
+        <div class="col-md-5 col-md-offset-1 result">
           <!-- Populating list result  -->
         </div>
       </div><!--Row close-->
