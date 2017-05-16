@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
-    <script src="js/bootstrap.js"></script>
+    <!-- <script src="js/bootstrap.js"></script> -->
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Packpartout - To help you pack for your trips!</title>
@@ -32,14 +32,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <form id="destination-question">
+          <form id="trip-questions">
             <div id="question-one">
               <div class="form-group">
-                <input type="text" class="form-control input-lg" name="destination" value="" id="destination" placeholder="Where are you headed?">
+                <input type="text" class="form-control input-lg" name="destination" id="destination" placeholder="Where are you headed?">
                 <button type="button" name="button" id="start-quiz" class="btn btn-success">Get packing!</button>
               </div><!--Form group close-->
             </div><!--Question one close-->
-          </form>
         </div><!--Col close for question one-->
       </div><!--Row close-->
 
@@ -47,7 +46,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="question-two">
-            <form id="trip-questions">
+
               <div class="form-group">
                 <h2>What will the temperature be on your trip?</h2>
                 <div class="checkbox">
