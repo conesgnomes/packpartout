@@ -2,7 +2,7 @@
 //
 function Trip(destination, weather, bag, addList) {
   this.destination = destination;
-  this.weather = weather;
+  this.weather = {};
   this.bag = bag;
   this.coreList = [];
   this.addList = [];
@@ -13,9 +13,15 @@ function Weather(temperature, humidity) {
   this.humidity = humidity;
 }
 
-// Trip.prototype.core = function(weather) {
-//   if (w)
-// }
+Weather.prototype.core = function() {
+  var result = [];
+  if (this.temperature === "hot") {
+    result = this.coreList = ["Tanktops/T-Shirts", "Shorts", "Light Cotton Pants/Skirts", "Underwear", "Thin Socks", "Comfortable Walking Shoes", "Sandals", "Brimmed Hat"];
+  // } else if (this.temperature === "temperate" || (this.temperature === )) {
+
+  }
+  return result;
+}
 
 // ui logic
 
