@@ -43,15 +43,18 @@ body {
   height: 100%;
   background-position: center;
   margin: -20px;
-  display: flex;
-  justify-content: center;
 }
 
 #adventure-button {
   font-size: 1.3em;
   padding: 1.4%;
-  border: solid red 3px;
-  /*margin-top: 2%;*/
+  /*border: solid red 3px;*/
+}
+
+#begin-button {
+  margin-top: -25%;
+  margin-bottom: 50%;
+  /*border: solid green 3px;*/
 }
 
 #landing {
@@ -63,7 +66,7 @@ body {
 #subhead {
   margin-bottom: 30%;
   padding: 10% 15% 0 25%;
-  border: solid orange 3px;
+  /*border: solid orange 3px;*/
   color: white;
 }
 
