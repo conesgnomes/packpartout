@@ -2,6 +2,7 @@
 body {
   font-family: "Comfortaa", cursive;
   text-align: center;
+  background-color: #ad680e;
 }
 
 /*Navbar*/
@@ -23,8 +24,13 @@ body {
 .navbar-brand {
   color: #f0f0f0;
   font-size: 4em;
-  padding: 10% 0 20% 10%;
+  padding: 10% 0 12% 10%;
   letter-spacing: .03em;
+}
+#definition {
+  color: #f0f0f0;
+  padding-left: 45%;
+  font-size: 1.5em;
 }
 .navbar-right {
   color: #f0f0f0;
@@ -68,7 +74,7 @@ body {
 }
 
 #begin-button {
-  margin-top: -25%;
+  margin-top: -24%;
   margin-bottom: 50%;
   /*border: solid green 3px;*/
 }
@@ -81,7 +87,7 @@ body {
 
 #subhead {
   margin-bottom: 30%;
-  padding: 10% 15% 0 25%;
+  padding: 10% 20% 0% 20%;
   color: #67390f;
   letter-spacing: 3px;
   font-weight: 700;
@@ -105,4 +111,21 @@ body {
   -moz-transition:1.2s;
   -webkit-transition:1.2s;
   transition:1.2s;
+}
+
+#destination {
+  margin-top: 5%;
+}
+
+.questions {
+  margin-top: 5%;
+  background-color: rgba(255,207,98, 1);
+  border-radius: 20px;
+}
+
+#list-head {
+  margin-top: 10%;
+}
+#working-list {
+  display: none;
 }
