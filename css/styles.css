@@ -9,7 +9,9 @@ body {
 
 .navbar {
   background-color: #dc8637;
+  box-shadow: 0 3px 15px -2px gray;
   border-radius: 0;
+  margin-bottom: -20px;
 }
 
 .navbar a:hover {
@@ -49,7 +51,7 @@ body {
   background-size: cover;
   height: 100%;
   background-position: center;
-  margin: -20px;
+  /*margin: -20px;*/
 }
 
 #adventure-button {
@@ -74,7 +76,7 @@ body {
 }
 
 #begin-button {
-  margin-top: -24%;
+  margin-top: -28%;
   margin-bottom: 50%;
   /*border: solid green 3px;*/
 }
@@ -87,13 +89,39 @@ body {
 
 #subhead {
   margin-bottom: 30%;
-  padding: 10% 20% 0% 20%;
+  padding: 10% 30% 0% 30%;
   color: #67390f;
   letter-spacing: 3px;
   font-weight: 700;
 }
 
 /*Container*/
+
+h3, p {
+  text-align: left;
+}
+
+h3 {
+  font-weight: bold;
+  color: rgba(117, 172, 152, 1);
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+}
+
+p {
+  font-size: 1.3em;
+  color: #67390f;
+}
+
+strong {
+  font-weight: 700;
+  color: rgba(117, 172, 152, 1);
+}
+
+.form-group {
+  color: #67390f;
+  padding-top: 25px;
+}
 
 .container {
   height: 2000px;
@@ -112,10 +140,6 @@ body {
   -moz-transition:1.2s;
   -webkit-transition:1.2s;
   transition:1.2s;
-}
-
-h2 {
-  font-size: 1.6em;
 }
 
 #destination {
@@ -150,4 +174,26 @@ input[type="radio"] {
 }
 #working-list {
   display: none;
+}
+
+
+#submit-button {
+  font-size: 1.5em;
+  padding: 1.4%;
+  background-color: rgba(220, 134, 55, 0.8);
+  border: none;
+  color: #fdfdfa;
+  font-weight: 700;
+  border-radius: 500px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#submit-button:hover {
+  background-color: rgba(220, 134, 55, 1);
+  transition: .5s;
 }
