@@ -2,7 +2,7 @@
 body {
   font-family: "Comfortaa", cursive;
   text-align: center;
-  background-color: #ad680e;
+  background-color: #faf7de;
 }
 
 /*Navbar*/
@@ -94,6 +94,7 @@ body {
 }
 
 /*Container*/
+
 .container {
   height: 2000px;
   margin-top: 3%;
@@ -113,14 +114,35 @@ body {
   transition:1.2s;
 }
 
+h2 {
+  font-size: 1.6em;
+}
+
 #destination {
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .questions {
-  margin-top: 5%;
-  background-color: rgba(255,207,98, 1);
-  border-radius: 20px;
+  margin-top: 10%;
+  background-color: #fdfdfa;
+  border-radius: 3px;
+  border: solid #d4d8bd 1px;
+  width: 60%;
+}
+.center {
+  margin: 0 6%;
+}
+
+input[type="checkbox"] {
+  transform:scale(1.6, 1.6);
+}
+
+input[type="radio"] {
+  transform:scale(1.2, 1.2);
+}
+
+#temp, #rainy, #bag-size {
+  font-size: 1.2em;
 }
 
 #list-head {
