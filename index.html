@@ -48,51 +48,88 @@
             </div><!--Question one close-->
         </div><!--Col close for question one-->
       </div><!--Row close-->
-      <br>
+
     <!--QUESTION TWO-->
+
       <div class="row">
-        <!-- <div class="col-md-5 col-md-offset-1"> -->
-          <div class="question-two">
-              <div class="form-group" id="temp">
-                <h2>What will the temperature be on your trip?</h2>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="hot"> Hot
-                  </label>
-                  <label class="center">
-                    <input type="checkbox" value="temperate"> Temperate
-                  </label>
-                  <label>
-                    <input type="checkbox" value="cold"> Cold
-                  </label>
-                </div>
-              </div> <!--Form group close-->
-            </div><!--Question two close-->
-            <br>
-            <div class="question-three">
-              <div class="form-group" id="rainy">
-                <h2>Might it rain on your travels?</h2>
-                <input type="radio" name="rain" id="yes" value="yes" class="radio-button">
-                <label for="yes">Yes</label>
-                <input type="radio" name="rain" id="no" value="no" class="radio-button">
-                <label for="no">No</label>
-                <input type="radio" name="rain" id="not-sure" value="not-sure" class="radio-button">
-                <label for="not-sure">Not Sure</label>
-              </div>
-            </div><!--Question three close-->
-            <br>
-            <div class="form-group" id="bag-size">
-              <h2>How big is your bag?</h2>
+        <div class="question-two">
+          <div class="col-md-4">
+            <h3>Temperature</h3>
+            <p>What will the <strong>temperature</strong> be on your trip?</p>
+          </div> <!-- Temperature header close -->
+          <div class="col-md-8">
+            <div class="form-group" id="temp">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="hot"> Hot
+                </label>
+                <label class="center">
+                  <input type="checkbox" value="temperate"> Temperate
+                </label>
+                <label>
+                  <input type="checkbox" value="cold"> Cold
+                </label>
+              </div> <!-- Checkbox group close -->
+            </div> <!-- Form group close -->
+          </div> <!-- Temperature options close -->
+        </div> <!-- Question two close -->
+      </div> <!-- Question two row close -->
+
+    <!-- QUESTION THREE -->
+
+    <div class="row">
+      <hr>
+      <div class="question-three">
+        <div class="col-md-4">
+          <h3>Humidity</h3>
+          <p>Might it <strong>rain</strong> on your travels?</p>
+        </div> <!-- Temperature header close -->
+        <div class="col-md-8">
+          <div class="form-group" id="rainy">
+            <div class="radio-buttons">
+              <input type="radio" name="rain" id="yes" value="yes" class="radio-button">
+              <label for="yes" class="radio-inline">Yes</label>
+              <input type="radio" name="rain" id="no" value="no" class="radio-button">
+              <label for="no" class="radio-inline">No</label>
+              <input type="radio" name="rain" id="not-sure" value="not-sure" class="radio-button">
+              <label for="not-sure" class="radio-inline">Not Sure</label>
+            </div> <!-- Radio group close -->
+          </div> <!-- Form group close -->
+        </div> <!-- Humidity options close -->
+      </div> <!-- Question three close -->
+    </div> <!-- Question three row close -->
+
+    <!-- QUESTION FOUR -->
+
+    <div class="row">
+      <hr>
+      <div class="question-four">
+        <div class="col-md-4">
+          <h3>Luggage</h3>
+          <p>How <strong>big</strong> is your bag?</p>
+        </div> <!-- Bag header close -->
+        <div class="col-md-8">
+          <div class="form-group" id="bag-size">
+            <div class="radio-buttons">
               <input type="radio" name="bag" id="small" value="small" class="radio-button">
               <label for="small" class="small-bag">Small</label>
               <input type="radio" name="bag" id="medium" value="medium" class="radio-button">
               <label for="medium" class="medium-bag">Medium</label>
               <input type="radio" name="bag" id="large" value="large" class="radio-button">
               <label for="large" class="large-bag">Large</label>
-            </div>
-            <button type="submit" name="form-submit" id="form-submit">Bon Voyage!</button>
-          </form>
-        </div><!--Col close-->
+            </div><!--Radio group close-->
+          </div> <!-- Form group close -->
+        </div> <!-- Bag size options close -->
+      </div> <!-- Question four close -->
+    </div> <!-- Question four row close -->
+
+    <!--SUBMIT BUTTON-->
+
+    <div id="submit">
+      <button type="submit" id="submit-button" name="form-submit" id="form-submit">Bon Voyage!</button>
+    </div>
+    </form>
+
         <!-- <div class="col-md-5 col-md-offset-1 result"> -->
           <h2 id="list-head"></h2>
           <ul id="working-list">
