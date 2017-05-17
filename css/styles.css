@@ -3,6 +3,7 @@ body {
   font-family: "Comfortaa", cursive;
   text-align: center;
   background-color: #faf7de;
+  height: 2300px;
 }
 
 /*Navbar*/
@@ -40,6 +41,10 @@ body {
   padding-top: 2.5%;
   font-size: 1.5em;
   letter-spacing: .03em;
+}
+
+#tagline {
+  color: #fff;
 }
 
 /*Landing*/
@@ -118,13 +123,31 @@ strong {
   color: rgba(117, 172, 152, 1);
 }
 
+#create-list {
+  padding-top: 5%;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(220, 134, 55);
+  font-size: 3.2em;
+
+}
+
+#instructions {
+  text-align: center;
+  margin-top: 4%;
+}
+
 .form-group {
   color: #67390f;
-  padding-top: 25px;
+  text-align: right;
+}
+
+#form-padding {
+  padding: 0 3%;
 }
 
 .container {
-  height: 2000px;
   margin-top: 3%;
   margin-bottom: 6%
 }
@@ -144,15 +167,26 @@ strong {
 
 #destination {
   margin-top: 10%;
+  margin-bottom: 20%;
 }
 
 .questions {
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: #fdfdfa;
   border-radius: 3px;
   border: solid #d4d8bd 1px;
   width: 60%;
 }
+
+/*.question-three, .question-four, #submit {
+  display: none;
+}*/
+
+hr {
+  border-top: solid rgba(212, 216, 189, .5) 1px;
+  width: 97%;
+}
+
 .center {
   margin: 0 6%;
 }
@@ -172,10 +206,10 @@ input[type="radio"] {
 #list-head {
   margin-top: 10%;
 }
-#working-list {
-  display: none;
-}
 
+#working-list {
+  /*display: none;*/
+}
 
 #submit-button {
   font-size: 1.5em;

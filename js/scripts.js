@@ -97,7 +97,7 @@ $(function() {
 
   $("#adventure-button").click(function() {
     $("html,body").animate({
-      scrollTop: $("#question-one").offset().top-100}, "slow");
+      scrollTop: $("#question-one").offset().top-300}, "slow");
   });
 
 });
