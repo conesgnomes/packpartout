@@ -153,7 +153,7 @@ $(function() {
 
   $("#adventure-button").click(function() {
     $("html,body").animate({
-      scrollTop: $("#question-one").offset().top-70}, "slow");
+      scrollTop: $("#question-one").offset().top-300}, "slow");
   });
 
 });

@@ -2,14 +2,17 @@
 body {
   font-family: "Comfortaa", cursive;
   text-align: center;
-  background-color: #ad680e;
+  background-color: #faf7de;
+  height: 2300px;
 }
 
 /*Navbar*/
 
 .navbar {
   background-color: #dc8637;
+  box-shadow: 0 3px 15px -2px gray;
   border-radius: 0;
+  margin-bottom: -20px;
 }
 
 .navbar a:hover {
@@ -40,6 +43,10 @@ body {
   letter-spacing: .03em;
 }
 
+#tagline {
+  color: #fff;
+}
+
 /*Landing*/
 
 .text {
@@ -49,7 +56,7 @@ body {
   background-size: cover;
   height: 100%;
   background-position: center;
-  margin: -20px;
+  /*margin: -20px;*/
 }
 
 #adventure-button {
@@ -74,7 +81,7 @@ body {
 }
 
 #begin-button {
-  margin-top: -24%;
+  margin-top: -28%;
   margin-bottom: 50%;
   /*border: solid green 3px;*/
 }
@@ -87,15 +94,60 @@ body {
 
 #subhead {
   margin-bottom: 30%;
-  padding: 10% 20% 0% 20%;
+  padding: 10% 30% 0% 30%;
   color: #67390f;
   letter-spacing: 3px;
   font-weight: 700;
 }
 
 /*Container*/
+
+h3, p {
+  text-align: left;
+}
+
+h3 {
+  font-weight: bold;
+  color: rgba(117, 172, 152, 1);
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+}
+
+p {
+  font-size: 1.3em;
+  color: #67390f;
+}
+
+strong {
+  font-weight: 700;
+  color: rgba(117, 172, 152, 1);
+}
+
+#create-list {
+  padding-top: 5%;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(220, 134, 55);
+  font-size: 3.2em;
+
+}
+
+#instructions {
+  text-align: center;
+  margin-top: 4%;
+}
+
+.form-group {
+  color: #67390f;
+  text-align: right;
+}
+
+#form-padding {
+  padding: 0 3%;
+}
+
 .container {
-  height: 2000px;
   margin-top: 3%;
   margin-bottom: 6%
 }
@@ -114,13 +166,41 @@ body {
 }
 
 #destination {
-  margin-top: 5%;
+  margin-top: 10%;
+  margin-bottom: 20%;
 }
 
 .questions {
   margin-top: 5%;
-  background-color: rgba(255,207,98, 1);
-  border-radius: 20px;
+  background-color: #fdfdfa;
+  border-radius: 3px;
+  border: solid #d4d8bd 1px;
+  width: 60%;
+}
+
+/*.question-three, .question-four, #submit {
+  display: none;
+}*/
+
+hr {
+  border-top: solid rgba(212, 216, 189, .5) 1px;
+  width: 97%;
+}
+
+.center {
+  margin: 0 6%;
+}
+
+input[type="checkbox"] {
+  transform:scale(1.6, 1.6);
+}
+
+input[type="radio"] {
+  transform:scale(1.2, 1.2);
+}
+
+#temp, #rainy, #bag-size {
+  font-size: 1.2em;
 }
 
 #list-head {
@@ -128,6 +208,39 @@ body {
 }
 
 #working-list {
-  list-style-type: none;
-  padding: 0;
+  /*display: none;*/
+}
+
+#submit-button {
+  font-size: 1.5em;
+  padding: 1.4%;
+  background-color: rgba(220, 134, 55, 0.8);
+  border: none;
+  color: #fdfdfa;
+  font-weight: 700;
+  border-radius: 500px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#submit-button:hover {
+  background-color: rgba(220, 134, 55, 1);
+  transition: .5s;
+}
+
+/*Hide subtitle*/
+
+@media only screen and (min-width: 1024px) {
+.navbar-right {
+}
+
+}
+@media only screen and (max-width: 767px) {
+.navbar-right {
+  display: none;
+}
 }
