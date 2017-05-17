@@ -3,9 +3,18 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
-    <!-- <script src="js/bootstrap.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+      $(document).ready(function(){
+        console.log("hello");
+        $("#adventure-button").click(function() {
+          $("html,body").animate({
+            scrollTop: $("#question-one").offset().top}, "slow");
+          });
+        });
+      </script>
     <title>Packpartout - To help you pack for your trips!</title>
   </head>
   <body>
@@ -22,9 +31,15 @@
             </span>
           </div> <!--Container close -->
       </nav><!--Nav closes-->
-      <h1>Packpartout</h1>
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.</h2>
-      <a href="#question-one" class="btn btn-primary btn-xl page-scroll">Let's plan your adventure!</a>
+      <div id="landing">
+        <div class="text">
+          <h1 id="subhead">Whether you're going around the world in 80 days or 8, Packpartout will help you plan your next adventure by suggesting what you'll need to pack.</h1>
+          <div id="begin-button">
+            <button href="#question-one" id="adventure-button">Let's plan your adventure!</button>
+          </div>
+          <br>
+        </div>
+      </div><!--Landing close-->
     </div><!--Head div closes-->
 
   <!--QUESTION ONE-->
@@ -41,10 +56,10 @@
             </div><!--Question one close-->
         </div><!--Col close for question one-->
       </div><!--Row close-->
-
+      <br>
     <!--QUESTION TWO-->
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5 col-md-offset-1">
           <div class="question-two">
 
               <div class="form-group">
@@ -62,6 +77,7 @@
                 </div>
               </div> <!--Form group close-->
             </div><!--Question two close-->
+            <br>
             <div class="question-three">
               <div class="form-group">
                 <h2>What will the climate be on your trip?</h2>
@@ -78,6 +94,7 @@
                 </div>
               </div>
             </div><!--Question three close-->
+            <br>
             <div class="form-group">
               <h2>How big is your bag?</h2>
               <input type="radio" name="bag" id="small" value="small" class="radio-button">
@@ -90,7 +107,7 @@
             <button type="submit" name="form-submit" id="form-submit">Bon Voyage!</button>
           </form>
         </div><!--Col close-->
-        <div class="col-md-6 result">
+        <div class="col-md-5 col-md-offset-1 result">
           <!-- Populating list result  -->
         </div>
       </div><!--Row close-->
