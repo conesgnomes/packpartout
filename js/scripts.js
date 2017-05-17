@@ -4,8 +4,8 @@ function Trip(destination, bag) {
   this.destination = destination;
   this.weather = {};
   this.bag = bag;
-  this.coreList = [];
-  this.addList = [];
+  // this.coreList = [];
+  // this.addList = [];
 }
 
 function Weather(temperature, rain) {
@@ -74,7 +74,7 @@ Trip.prototype.numberOfItems = function(array) {
 
   if (this.bag === "small") {
 
-    for(i = 0; i < array.length; i++)
+    for(i = 0; i < array.length; i++) {
 
       if (array[i] === "Underwear" || array[i] === "Thin Socks") {
         numberOf = 4;
@@ -92,13 +92,11 @@ Trip.prototype.numberOfItems = function(array) {
         numberOf = 1;
       }
 
-      return numberOf;
-      alert(numberOf);
+
     }
-
+    }
+    return numberOf;
   }
-
-// UI to gather inputs from form
 
 // UI logic
 
@@ -116,26 +114,34 @@ $(function() {
 
     var newWeather = new Weather(temperature, rain);
     var newTrip = new Trip(destination, bag);
+    // console.log(newTrip);
 
     $("#temp input:checked").each(function(i) {
         temperature[i] = $(this).val();
     });
 
+    newTrip.destination = destination;
     newWeather.temperature = temperature;
     newWeather.rain = rain;
+    newTrip.bag = bag;
+
     var rainDisplay = newWeather.rainChance();
     $("#rain-notice").html(rainDisplay);
 
     var listArray = newWeather.core();
+
+    var num = newTrip.numberOfItems(listArray);
+    console.log(num);
+
     var output = '';
     listArray.forEach(function(item) {
-
       output += '<li><span id="number">' + ' ' + '</span>'+ item + '</li>';
     });
 
     $("#working-list").html(output);
 
-  });
+
+  });// end .change method
 
   $("#destination").keyup(function() {
 
