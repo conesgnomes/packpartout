@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/bootstrap.js"></script>
-    <!-- <script src="js/scripts.js"></script> -->
     <script>
       $(document).ready(function(){
         console.log("hello");
@@ -48,16 +47,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <form id="destination-question">
+          <form id="trip-questions">
             <div id="question-one">
               <div class="form-group">
-              <br>
-                <input type="text" class="form-control input-lg" name="destination" value="" id="destination" placeholder="Where are you headed?">
-                <br>
-                <button type="button" name="button" id="start-quiz">Get packing!</button>
+                <input type="text" class="form-control input-lg" name="destination" id="destination" placeholder="Where are you headed?">
+                <button type="button" name="button" id="start-quiz" class="btn btn-success">Get packing!</button>
               </div><!--Form group close-->
             </div><!--Question one close-->
-          </form>
         </div><!--Col close for question one-->
       </div><!--Row close-->
       <br>
@@ -65,18 +61,18 @@
       <div class="row">
         <div class="col-md-5 col-md-offset-1">
           <div class="question-two">
-            <form id="trip-questions">
+
               <div class="form-group">
                 <h2>What will the temperature be on your trip?</h2>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox"> Hot
+                    <input type="checkbox" value="hot"> Hot
                   </label>
                   <label>
-                    <input type="checkbox"> Temperate
+                    <input type="checkbox" value="temperate"> Temperate
                   </label>
                   <label>
-                    <input type="checkbox"> Cold
+                    <input type="checkbox" value="cold"> Cold
                   </label>
                 </div>
               </div> <!--Form group close-->
