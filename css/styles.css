@@ -126,6 +126,8 @@ body {
 #list-head {
   margin-top: 10%;
 }
+
 #working-list {
-  display: none;
+  list-style-type: none;
+  padding: 0;
 }

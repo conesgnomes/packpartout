@@ -1,25 +1,25 @@
 // back-end logic
 
-function Trip(destination, bag, addList) {
+function Trip(destination, bag) {
   this.destination = destination;
   this.weather = {};
   this.bag = bag;
-  this.coreList = [];
-  this.addList = [];
+  // this.coreList = [];
+  // this.addList = [];
 }
 
-function Weather(temperature, humidity) {
+function Weather(temperature, rain) {
 this.temperature = [];
-this.humidity = [];
+this.rain = rain;
 }
 
 // method to build core packing list based on temperature
 Weather.prototype.core = function() {
   var masterList = [["Underwear", "Tanktops/T-Shirts"], // every list 0
-  ["Shorts", "Light Pants/Skirts", "Thin Socks", "Sandals", "Brimmed Hat"], // 1 hot and temperate
+  ["Shorts", "Light Pants/Skirt(s)", "Thin Socks", "Sandals", "Brimmed Hat"], // 1 hot and temperate
   ["Light Jacket"], // temperate 2
-  ["Comfortable Walking Shoes", "Jeans", "Long Sleeve Shirts"], // temperate and cold 3
-  ["Thermal Shirts and Pants", "Sweaters", "Thick Socks", "Weatherproof Boots", "Heavy Coat", "Gloves",  "Scarfs", "Winter Hat"]]; //cold 4
+  ["Comfortable Walking Shoes", "Jeans", "Long Sleeve Shirt(s)"], // temperate and cold 3
+  ["Thermal Shirt(s) and Pant(s)", "Sweater(s)", "Thick Socks", "Weatherproof Boots", "Heavy Coat", "Gloves",  "Scarves", "Winter Hat"]]; //cold 4
   var tripList = [masterList[0]];
   for (i = 0; i < this.temperature.length; i++) {
     if (this.temperature[i] === "hot") {
@@ -50,42 +50,98 @@ Weather.prototype.core = function() {
   return [].concat.apply([], tripList);
 }
 
-// weather prototype to add to/take away from, core packing list based on humidity
+// Rain prototype to add to/take away from, core packing list based on whether it's raining or not
+Weather.prototype.rainChance = function() {
+  var output = "";
 
+  if (this.rain === "yes") {
+    output = "Don't forget to pack an umbrella and rain jacket!";
+  }
+
+  if (this.rain === "no") {
+    output = "Check the weather just in case it might rain, okay?";
+  }
+
+  if (this.rain === "not-sure") {
+    output = "Check the weather just in case it might rain, okay?";
+  }
+  return output;
+}
 
 //trip prototype that changes numbers of items based on size of bag
+Trip.prototype.numberOfItems = function(array) {
+  var numberOf = 0;
 
-// UI to gather inputs from form
+  if (this.bag === "small") {
+
+    for(i = 0; i < array.length; i++) {
+
+      if (array[i] === "Underwear" || array[i] === "Thin Socks") {
+        numberOf = 4;
+      }
+
+      if (array[i] === "Tanktops/T-Shirts") {
+        numberOf = 3;
+      }
+
+      if (array[i] === "Thick Socks" || array[i] === "Long Sleeved Shirts") {
+        numberOf = 2;
+      }
+
+      if (array[i] === "Shorts" || array[i] === "Light Pants/Skirt(s)" || array[i] === "Jeans" || array[i] === "Thermal Shirt(s) and Pant(s)" || array[i] === "Sweater(s)") {
+        numberOf = 1;
+      }
+
+
+    }
+    }
+    return numberOf;
+  }
 
 // UI logic
 
 $(function() {
   var destination = $("#destination").val();
-
-  // var bag;
   // var addList = [];
 
-  // var newTrip = new Trip(destination);
-  $("#temp input").change(function() {
-    var humidity = [];
+  // grab values from form, display them all within .change
+  $(".questions").change(function() {
+
+    // get value for Weather rain property
+    var rain =  $("input:radio[name=rain]:checked").val();
     var temperature = [];
-    var newWeather = new Weather(temperature, humidity);
+    var bag = $("input:radio[name=bag]:checked").val();
+
+    var newWeather = new Weather(temperature, rain);
+    var newTrip = new Trip(destination, bag);
+    // console.log(newTrip);
+
     $("#temp input:checked").each(function(i) {
         temperature[i] = $(this).val();
-      });
+    });
+
+    newTrip.destination = destination;
     newWeather.temperature = temperature;
-    // alert(newWeather.core());
+    newWeather.rain = rain;
+    newTrip.bag = bag;
+
+    var rainDisplay = newWeather.rainChance();
+    $("#rain-notice").html(rainDisplay);
+
     var listArray = newWeather.core();
+
+    var num = newTrip.numberOfItems(listArray);
+    console.log(num);
+
     var output = '';
     listArray.forEach(function(item) {
-
-      output += '<li>' + item + '</li>';
+      output += '<li><span id="number">' + ' ' + '</span>'+ item + '</li>';
     });
 
     $("#working-list").html(output);
-  });
 
-  // put all in list items
+
+  });// end .change method
 
   $("#destination").keyup(function() {
 
