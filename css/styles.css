@@ -231,3 +231,16 @@ input[type="radio"] {
   background-color: rgba(220, 134, 55, 1);
   transition: .5s;
 }
+
+/*Hide subtitle*/
+
+@media only screen and (min-width: 1024px) {
+.navbar-right {
+}
+
+}
+@media only screen and (max-width: 767px) {
+.navbar-right {
+  display: none;
+}
+}
