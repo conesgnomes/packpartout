@@ -32,6 +32,7 @@ Weather.prototype.core = function() {
         if(tripList.indexOf(masterList[1]) === -1) {
           tripList.push(masterList[1]);
         }
+
         if(tripList.indexOf(masterList[3]) === -1) {
           tripList.push(masterList[3]);
         }
@@ -45,10 +46,12 @@ Weather.prototype.core = function() {
         tripList.push(masterList[4]);
       }
   }
-  return tripList;
+
+  return [].concat.apply([], tripList);
 }
 
 // weather prototype to add to/take away from, core packing list based on humidity
+
 
 //trip prototype that changes numbers of items based on size of bag
 
@@ -75,6 +78,7 @@ $(function() {
     var listArray = newWeather.core();
     var output = '';
     listArray.forEach(function(item) {
+
       output += '<li>' + item + '</li>';
     });
 
