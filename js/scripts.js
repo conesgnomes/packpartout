@@ -10,7 +10,7 @@ function Trip(destination, bag, addList) {
 
 function Weather(temperature, humidity) {
 this.temperature = [];
-  this.humidity = [];
+this.humidity = [];
 }
 
 // method to build core packing list based on temperature
@@ -58,20 +58,42 @@ Weather.prototype.core = function() {
 
 $(function() {
   var destination = $("#destination").val();
-  var temperature = [];
-  var humidity = [];
+
   // var bag;
   // var addList = [];
 
-  var newTrip = new Trip(destination);
-  var newWeather = new Weather(temperature, humidity); 
+  // var newTrip = new Trip(destination);
+  $("#temp input").change(function() {
+    var humidity = [];
+    var temperature = [];
+    var newWeather = new Weather(temperature, humidity);
+    $("#temp input:checked").each(function(i) {
+        temperature[i] = $(this).val();
+      });
+    newWeather.temperature = temperature;
+    // alert(newWeather.core());
+    var listArray = newWeather.core();
+    var output = '';
+    listArray.forEach(function(item) {
+      output += '<li>' + item + '</li>';
+    });
+
+    $("#working-list").html(output);
+  });
+
+  // put all in list items
 
   $("#destination").keyup(function() {
 
     destination = $(this).val();
 
-    $(".result").html("<h2>" + destination + "</h2>");
+    $("#list-head").html(destination);
 
+  });
+
+  $("#adventure-button").click(function() {
+    $("html,body").animate({
+      scrollTop: $("#question-one").offset().top}, "slow");
   });
 
 });
