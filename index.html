@@ -5,16 +5,8 @@
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script>
-      $(document).ready(function(){
-        console.log("hello");
-        $("#adventure-button").click(function() {
-          $("html,body").animate({
-            scrollTop: $("#question-one").offset().top}, "slow");
-          });
-        });
-      </script>
     <title>Packpartout - To help you pack for your trips!</title>
   </head>
   <body>
@@ -51,7 +43,6 @@
             <div id="question-one">
               <div class="form-group">
                 <input type="text" class="form-control input-lg" name="destination" id="destination" placeholder="Where are you headed?">
-                <button type="button" name="button" id="start-quiz" class="btn btn-success">Get packing!</button>
               </div><!--Form group close-->
             </div><!--Question one close-->
         </div><!--Col close for question one-->
@@ -62,7 +53,7 @@
         <div class="col-md-5 col-md-offset-1">
           <div class="question-two">
 
-              <div class="form-group">
+              <div class="form-group" id="temp">
                 <h2>What will the temperature be on your trip?</h2>
                 <div class="checkbox">
                   <label>
@@ -80,16 +71,16 @@
             <br>
             <div class="question-three">
               <div class="form-group">
-                <h2>What will the climate be on your trip?</h2>
+                <h2>What will the humidity <!-- climate -->be on your trip?</h2>
                 <div class="checkbox">
                   <label>
                     <input type="checkbox"> Dry
                   </label>
                   <label>
-                    <input type="checkbox"> Humid
+                    <input type="checkbox"> Muggy
                   </label>
                   <label>
-                    <input type="checkbox"> Wet
+                    <input type="checkbox"> Rainy
                   </label>
                 </div>
               </div>
@@ -108,6 +99,10 @@
           </form>
         </div><!--Col close-->
         <div class="col-md-5 col-md-offset-1 result">
+          <h2 id="list-head"></h2>
+          <ul id="working-list">
+
+          </ul>
           <!-- Populating list result  -->
         </div>
       </div><!--Row close-->
