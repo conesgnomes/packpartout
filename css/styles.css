@@ -178,9 +178,9 @@ strong {
   width: 60%;
 }
 
-/*.question-three, .question-four, #submit {
+.question-two, .question-three, .question-four {
   display: none;
-}*/
+}
 
 hr {
   border-top: solid rgba(212, 216, 189, .5) 1px;
@@ -205,10 +205,6 @@ input[type="radio"] {
 
 #list-head {
   margin-top: 10%;
-}
-
-#working-list {
-  /*display: none;*/
 }
 
 #submit-button {

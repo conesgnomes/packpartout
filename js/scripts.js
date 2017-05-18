@@ -136,7 +136,6 @@ $(function() {
     var listArray = newWeather.core();
 
     var num = newTrip.numberOfItems(listArray);
-    console.log(num);
 
     var output = '';
     listArray.forEach(function(item) {
@@ -146,16 +145,26 @@ $(function() {
     $("#working-list").html(output);
 
 
+
   });// end .change method
 
   $("#submit-button").click(function(e) {
     e.preventDefault();
     destination = $("#destination").val();
-
+    $(".question-two").fadeIn(600);
     $("#list-head").html(destination);
 
   });
 
+  $(".checkbox").click(function() {
+    $(".question-three").fadeIn(600);
+
+  });
+
+  $("#rainy").click(function() {
+    $(".question-four").fadeIn(600);
+
+  });
   // Smooth scoll effect from top
 
   $("#adventure-button").click(function() {
