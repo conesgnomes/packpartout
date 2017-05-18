@@ -42,25 +42,24 @@
 
     <div class="container questions">
       <div class="row">
-      <h2 id="create-list">Create Your Packing List</h2>
-      <div class="col-md-8 col-md-offset-2">
-        <p id="instructions">Enter a destination and select from the options below to receive a customized packing list tailored to your specific needs.</p>
-      </div>
-        <div class="col-md-6 col-md-offset-3">
+        <h2 id="create-list">Create Your Packing List</h2>
+        <div class="col-md-8 col-md-offset-2">
+          <p id="instructions">Enter a destination and select from the options below to receive a customized packing list tailored to your specific needs.</p>
+        </div>
+        <div class="col-md-6 col-md-offset-3" id="text-box-div">
           <form id="trip-questions">
             <div id="question-one">
               <div class="form-group">
                 <input type="text" class="form-control input-lg" name="destination" id="destination" placeholder="Where are you headed?">
               </div><!--Form group close-->
             </div><!--Question one close-->
+            <!--SUBMIT BUTTON-->
+            <div id="submit">
+              <button type="submit" id="submit-button" name="form-submit">Get Packing!</button>
+            </div>
         </div><!--Col close for question one-->
       </div><!--Row close-->
 
-      <!--SUBMIT BUTTON-->
-
-      <div id="submit">
-        <button type="submit" id="submit-button" name="form-submit">Get Packing!</button>
-      </div>
 
     <!--QUESTION TWO-->
 
@@ -108,11 +107,11 @@
             <div class="col-md-8">
               <div class="form-group" id="rainy">
                 <div class="radio-buttons">
-                  <input type="radio" name="rain" id="yes" value="yes" class="radio-button">
+                  <input type="radio" name="rain" id="yes" value="yes" class="radio-button rain-button">
                   <label for="yes" class="radio-inline">Yes</label>
-                  <input type="radio" name="rain" id="no" value="no" class="radio-button">
+                  <input type="radio" name="rain" id="no" value="no" class="radio-button rain-button">
                   <label for="no" class="radio-inline">No</label>
-                  <input type="radio" name="rain" id="not-sure" value="not-sure" class="radio-button">
+                  <input type="radio" name="rain" id="not-sure" value="not-sure" class="radio-button rain-button">
                   <label for="not-sure" class="radio-inline">Not Sure</label>
                 </div> <!-- Radio group close -->
               </div> <!-- Form group close -->
@@ -132,12 +131,12 @@
             <div class="col-md-8">
               <div class="form-group" id="bag-size">
                 <div class="radio-buttons">
-                  <input type="radio" name="bag" id="small" value="small" class="radio-button">
-                  <label for="small" class="radio-inline">Small</label>
-                  <input type="radio" name="bag" id="medium" value="medium" class="radio-button">
-                  <label for="medium" class="radio-inline">Medium</label>
-                  <input type="radio" name="bag" id="large" value="large" class="radio-button">
-                  <label for="large" class="radio-inline">Large</label>
+                  <input type="radio" name="bag" id="small" value="small" class="radio-button icon-button">
+                  <label for="small" class="radio-inline"><img src="https://github.com/avocadobravado/rose-intro-team-week-ideas/blob/master/small.png?raw=true" alt="small" class="luggage-icon"></label>
+                  <input type="radio" name="bag" id="medium" value="medium" class="radio-button icon-button">
+                  <label for="medium" class="radio-inline"><img src="https://github.com/avocadobravado/rose-intro-team-week-ideas/blob/master/medium.png?raw=true" alt="medium" class="luggage-icon"></label>
+                  <input type="radio" name="bag" id="large" value="large" class="radio-button icon-button">
+                  <label for="large" class="radio-inline"><img src="https://github.com/avocadobravado/rose-intro-team-week-ideas/blob/master/large.png?raw=true" alt="large" class="luggage-icon"></label>
                 </div><!--Radio group close-->
               </div> <!-- Form group close -->
             </div> <!-- Bag size options close -->
