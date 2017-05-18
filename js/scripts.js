@@ -69,34 +69,38 @@ Weather.prototype.rainChance = function() {
 }
 
 //trip prototype that changes numbers of items based on size of bag
-Trip.prototype.numberOfItems = function(array) {
-  var numberOf = 0;
+Trip.prototype.numberOfItems = function(item) {
+  var output = 0;
 
-  if (this.bag === "small") {
-
-    for(i = 0; i < array.length; i++) {
-
-      if (array[i] === "Underwear" || array[i] === "Thin Socks") {
-        numberOf = 4;
+      if (item === "Underwear" || item === "Thin Socks") {
+        output = 4;
       }
 
-      if (array[i] === "Tanktops/T-Shirts") {
-        numberOf = 3;
+      if (item === "Tanktops/T-Shirts") {
+        output = 3;
       }
 
-      if (array[i] === "Thick Socks" || array[i] === "Long Sleeved Shirts") {
-        numberOf = 2;
+      if (item === "Thick Socks" || item === "Long Sleeved Shirts") {
+        output = 2;
       }
 
-      if (array[i] === "Shorts" || array[i] === "Light Pants/Skirt(s)" || array[i] === "Jeans" || array[i] === "Thermal Shirt(s) and Pant(s)" || array[i] === "Sweater(s)") {
-        numberOf = 1;
+      if (item === "Shorts" || item === "Light Pants/Skirt(s)" || item === "Jeans" || item === "Thermal Shirt(s) and Pant(s)" || item === "Sweater(s)") {
+        output = 1;
+      }
+      if (this.bag === "medium" && output !== 0) {
+        return output += 2;
       }
 
+      if (this.bag === "large" && output !== 0) {
+        return output += 3;
+      }
 
-    }
-    }
-    return numberOf;
+      if (output === 0) {
+        output = "";
+      }
+    return output;
   }
+
 
 // UI logic
 
@@ -135,7 +139,8 @@ $(function() {
 
     var output = '';
     listArray.forEach(function(item) {
-      output += '<li><span id="number">' + ' ' + '</span>'+ item + '</li>';
+      var num = newTrip.numberOfItems(item);
+      output += '<li><span id="number">' + num + ' ' + '</span>'+ item + '</li>';
     });
 
     $("#working-list").html(output);
