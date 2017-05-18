@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://use.fontawesome.com/fc36e8b56a.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
@@ -65,21 +66,28 @@
             <div class="col-md-8">
               <div class="form-group" id="temp">
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="hot"> Hot
+                  <input type="checkbox" id="checkbox1" value="hot">
+                  <label for="checkbox1">
+                      Hot
                   </label>
-                  <label class="center">
-                    <input type="checkbox" value="temperate"> Temperate
+                  <input type="checkbox" id="checkbox2" value="temperate">
+                  <label for="checkbox2">
+                      Temperate
                   </label>
-                  <label>
-                    <input type="checkbox" value="cold"> Cold
+                  <input type="checkbox" id="checkbox3" value="cold">
+                  <label for="checkbox3">
+                      Cold
                   </label>
                 </div> <!-- Checkbox group close -->
               </div> <!-- Form group close -->
             </div> <!-- Temperature options close -->
           </div> <!-- Question two close -->
         </div> <!-- Question two row close -->
+        <form role="form">
 
+
+
+  </form>
         <!-- QUESTION THREE -->
 
         <div class="row">
@@ -117,17 +125,18 @@
               <div class="form-group" id="bag-size">
                 <div class="radio-buttons">
                   <input type="radio" name="bag" id="small" value="small" class="radio-button">
-                  <label for="small" class="small-bag">Small</label>
+                  <label for="small" class="radio-inline">Small</label>
                   <input type="radio" name="bag" id="medium" value="medium" class="radio-button">
-                  <label for="medium" class="medium-bag">Medium</label>
+                  <label for="medium" class="radio-inline">Medium</label>
                   <input type="radio" name="bag" id="large" value="large" class="radio-button">
-                  <label for="large" class="large-bag">Large</label>
+                  <label for="large" class="radio-inline">Large</label>
                 </div><!--Radio group close-->
               </div> <!-- Form group close -->
             </div> <!-- Bag size options close -->
           </div> <!-- Question four close -->
         </div> <!-- Question four row close -->
       </div>
+
 
     <!--SUBMIT BUTTON-->
 
