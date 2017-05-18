@@ -158,16 +158,21 @@ $(function() {
     destination = $("#destination").val();
     $(".question-two").fadeIn(600);
     $("#list-head").html(destination);
-
+    $("#list-head").fadeIn(600);
   });
 
   $(".checkbox").click(function() {
     $(".question-three").fadeIn(600);
+    $("ul").fadeIn(600);
+    $("html,body").animate({
+      scrollTop: $("#working-list").offset().top}, "slow");
 
   });
 
   $("#rainy").click(function() {
     $(".question-four").fadeIn(600);
+    $("html,body").animate({
+      scrollTop: $("#working-list").offset().top}, "slow");
 
   });
   // Smooth scoll effect from top

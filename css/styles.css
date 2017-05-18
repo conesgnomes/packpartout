@@ -179,7 +179,7 @@ strong {
   width: 60%;
 }
 
-.question-two, .question-three, .question-four {
+.question-two, .question-three, .question-four, #list-head {
   display: none;
 }
 
@@ -211,6 +211,7 @@ ul {
   padding: 0;
   font-size: 1.4em;
   color: #67390f;
+  display: none;
 }
 
 #rain-notice {
