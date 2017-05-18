@@ -15,11 +15,11 @@ this.rain = rain;
 
 // method to build core packing list based on temperature
 Weather.prototype.core = function() {
-  var masterList = [["Underwear", "Tanktops/T-Shirts"], // every list 0
-  ["Shorts", "Light Pants/Skirt(s)", "Thin Socks", "Sandals", "Brimmed Hat"], // 1 hot and temperate
+  var masterList = [["Pairs of Underwear", "Tanktops/T-Shirts"], // every list 0
+  ["Pair(s) of Shorts", "Pair(s) of Light Pants/Skirt(s)", "Thin Socks", "Sandals", "Brimmed Hat"], // 1 hot and temperate
   ["Light Jacket"], // temperate 2
-  ["Comfortable Walking Shoes", "Jeans", "Long Sleeve Shirt(s)"], // temperate and cold 3
-  ["Thermal Shirt(s) and Pant(s)", "Sweater(s)", "Thick Socks", "Weatherproof Boots", "Heavy Coat", "Gloves",  "Scarves", "Winter Hat"]]; //cold 4
+  ["Comfortable Walking Shoes", "Pair(s) of Jeans", "Long Sleeved Shirt(s)"], // temperate and cold 3
+  ["Thermal Shirt(s) and Pant(s)", "Sweater(s)", "Thick Socks", "Weatherproof Boots", "Heavy Coat", "Gloves",  "Scarf", "Winter Hat"]]; //cold 4
   var tripList = [];
 
   for (i = 0; i < this.temperature.length; i++) {
@@ -77,7 +77,7 @@ Weather.prototype.rainChance = function() {
 Trip.prototype.numberOfItems = function(item) {
   var output = 0;
 
-      if (item === "Underwear" || item === "Thin Socks") {
+      if (item === "Pairs of Underwear" || item === "Thin Socks") {
         output = 4;
       }
 
@@ -85,11 +85,11 @@ Trip.prototype.numberOfItems = function(item) {
         output = 3;
       }
 
-      if (item === "Thick Socks" || item === "Long Sleeved Shirts") {
+      if (item === "Thick Socks" || item === "Long Sleeved Shirt(s)") {
         output = 2;
       }
 
-      if (item === "Shorts" || item === "Light Pants/Skirt(s)" || item === "Jeans" || item === "Thermal Shirt(s) and Pant(s)" || item === "Sweater(s)") {
+      if (item === "Pair(s) of Shorts" || item === "Pair(s) of Light Pants/Skirt(s)" || item === "Pair(s) of Jeans" || item === "Thermal Shirt(s) and Pant(s)" || item === "Sweater(s)") {
         output = 1;
       }
       if (this.bag === "medium" && output !== 0) {
