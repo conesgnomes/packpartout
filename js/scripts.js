@@ -20,31 +20,36 @@ Weather.prototype.core = function() {
   ["Light Jacket"], // temperate 2
   ["Comfortable Walking Shoes", "Jeans", "Long Sleeve Shirt(s)"], // temperate and cold 3
   ["Thermal Shirt(s) and Pant(s)", "Sweater(s)", "Thick Socks", "Weatherproof Boots", "Heavy Coat", "Gloves",  "Scarves", "Winter Hat"]]; //cold 4
-  var tripList = [masterList[0]];
+  var tripList = [];
+
   for (i = 0; i < this.temperature.length; i++) {
     if (this.temperature[i] === "hot") {
-        if(tripList.indexOf(masterList[1]) === -1) {
-          tripList.push(masterList[1]);
-        }
+      if(tripList.indexOf(masterList[1]) === -1) {
+        tripList.push(masterList[1]);
+      }
+    }
+
+    if (this.temperature[i] === "temperate") {
+      if(tripList.indexOf(masterList[1]) === -1) {
+        tripList.push(masterList[1]);
       }
 
-      if (this.temperature[i] === "temperate") {
-        if(tripList.indexOf(masterList[1]) === -1) {
-          tripList.push(masterList[1]);
-        }
-
-        if(tripList.indexOf(masterList[3]) === -1) {
-          tripList.push(masterList[3]);
-        }
-        tripList.push(masterList[2]);
+      if(tripList.indexOf(masterList[3]) === -1) {
+        tripList.push(masterList[3]);
       }
+      tripList.push(masterList[2]);
+    }
 
-      if (this.temperature[i] === "cold") {
-        if(tripList.indexOf(masterList[3]) === -1) {
-          tripList.push(masterList[3]);
-        }
-        tripList.push(masterList[4]);
+    if (this.temperature[i] === "cold") {
+      if(tripList.indexOf(masterList[3]) === -1) {
+        tripList.push(masterList[3]);
       }
+      tripList.push(masterList[4]);
+    }
+  }
+
+  if (tripList.length > 0) {
+    tripList.push(masterList[0]);
   }
 
   return [].concat.apply([], tripList);
@@ -143,13 +148,15 @@ $(function() {
 
   });// end .change method
 
-  $("#destination").keyup(function() {
-
-    destination = $(this).val();
+  $("#submit-button").click(function(e) {
+    e.preventDefault();
+    destination = $("#destination").val();
 
     $("#list-head").html(destination);
 
   });
+
+  // Smooth scoll effect from top
 
   $("#adventure-button").click(function() {
     $("html,body").animate({
