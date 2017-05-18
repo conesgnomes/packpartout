@@ -16,8 +16,8 @@
 
 ## Screenshots of Application
 
-![alt text](../img/landing-page)
-![alt text](../img/quiz-page)
+![alt text](https://github.com/conesgnomes/packpartout/blob/master/img/landing-page.png?raw=true)
+![alt text](https://github.com/conesgnomes/packpartout/blob/master/img/quiz-page.png?raw=true)
 
 ## Setup/Installation Requirements
 
