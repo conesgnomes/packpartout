@@ -14,6 +14,11 @@
  | User answers question 3 "Might it rain on your travels?", selects only one option, and it will show either "Don't forget to pack an umbrella and rain jacket!" or "Check the weather just in case it might rain, okay?" | "No" | "Check the weather just in case it might rain, okay?" will appear below the packing list, with question 4 appearing  |
   | User answers question 4 "How big is your bag?" and packing items will not increase or increase by 2 or 3, depending on small, medium, or large size luggage | "Large" | Base list will increase by 3 items |
 
+## Screenshots of Application
+
+![alt text](../img/landing-page)
+![alt text](../img/quiz-page)
+
 ## Setup/Installation Requirements
 
 * Open CMD/Terminal
