@@ -172,6 +172,7 @@ strong {
 
 .questions {
   margin-top: 5%;
+  padding-bottom: 2%;
   background-color: #fdfdfa;
   border-radius: 3px;
   border: solid #d4d8bd 1px;
@@ -191,21 +192,33 @@ hr {
   margin: 0 6%;
 }
 
-/*input[type="checkbox"] {
-  transform:scale(1.6, 1.6);
-}
-
-input[type="radio"] {
-  transform:scale(1.2, 1.2);
-}*/
-
 #temp, #rainy, #bag-size {
   font-size: 1.2em;
 }
 
+/*PACKING LIST AREA*/
+
 #list-head {
-  margin-top: 10%;
+  margin-top: 2%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: rgb(220, 134, 55);
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.4em;
+  color: #67390f;
+}
+
+#rain-notice {
+  font-style: italic;
+  color: rgb(220, 134, 55);
+}
+
+/*PACKING LIST AREA ENDS*/
 
 #submit-button {
   font-size: 1.5em;
@@ -268,15 +281,53 @@ input[type="checkbox"]:checked + label:before {
 }
 
 /* MEDIA QUERIES*/
-/*Hide subtitle*/
-
-@media only screen and (min-width: 1024px) {
-.navbar-right {
-}
-
-}
-@media only screen and (max-width: 767px) {
+/*Tablet size*/
+@media only screen and (max-width: 905px) {
 .navbar-right {
   display: none;
+  }
+  #subhead {
+    font-size: 3.55em;
+  }
 }
+
+/*iPhone 6 plus size*/
+@media only screen and (max-width: 414px) {
+  .navbar-brand {
+    padding-top: 20px;
+    font-size: 3.2em;
+    line-height: 1em;
+  }
+  #definition {
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+  .navbar-right {
+    display: none;
+    }
+  #subhead {
+    font-size: 1.9em;
+  }
+  .questions {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+
+  input[type='checkbox'] + label:before,
+  input[type='radio'] + label:before {
+    display: inline-block;
+    font-family: FontAwesome;
+    padding-right: 5px;
+    width: 25px;
+    font-size: 1.3em;
+  }
+
+  body {
+    height: auto;
+  }
 }
