@@ -8,11 +8,11 @@
 
  | Behavior                                                  |  Input | Output    |
  | --------------------------------------------------------- | ------ | --------- |
- | User clicks "Begin" and is directed to first questions    | Clicks button | Directed to quiz     |
- | User types in destination           | "Timbuktu" | "My trip to Timbuktu" will appear in right side column and question 2 appears   |
- | User answers question 2 regarding temperature                  | "Hot"  | Question 3 will appear           |
- | User answers question 3 regarding climate | "Dry" | Once user inputs climate, a base packing list will appear in right side column and question 4 will populate |
-  | User answers question 4 regarding pack size | "Large" | Once user answers question regarding amount of stuff they'd like to pack, the base amount of packed items will increase (for example, 2 shirts for packing small and 7 shirts for packing large) |
+ | User clicks "LET'S GO!" and is directed to first question "Where are you headed?"    | Clicks button | Directed to quiz |
+ | User types in destination, then clicks "GET PACKING!", then destination and question 2 appears| "Timbuktu" | "Timbuktu" will appear at the bottom of the form, with question 2 appearing above the destination |
+ | User answers question 2, "What will the temperature be on your trip?", and selects one, two, or all options | "Hot"  | "Hot" packing list will appear below destination and question 3 will appear |
+ | User answers question 3 "Might it rain on your travels?", selects only one option, and it will show either "Don't forget to pack an umbrella and rain jacket!" or "Check the weather just in case it might rain, okay?" | "No" | "Check the weather just in case it might rain, okay?" will appear below the packing list, with question 4 appearing  |
+  | User answers question 4 "How big is your bag?" and packing items will not increase or increase by 2 or 3, depending on small, medium, or large size luggage | "Large" | Base list will increase by 3 items |
 
 ## Setup/Installation Requirements
 
@@ -27,7 +27,7 @@ OR...
 ## How to Use
 
 * Open index.html
-*
+* Answer questions prompted
 
 ## Known Bugs
 
@@ -53,10 +53,17 @@ OR...
 
 ## Acknowledgments
 
-*
+* http://www.freepik.com/
+* http://fontawesome.io/
 
 ## License
 
 This project is licensed under the MIT License
 
 **_Connor Larsen, Dylan Dills, Leah Sherrell, Rose Sponseller_** Copyright (c) 2017
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*
