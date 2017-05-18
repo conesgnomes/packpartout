@@ -15,36 +15,41 @@ this.rain = rain;
 
 // method to build core packing list based on temperature
 Weather.prototype.core = function() {
-  var masterList = [["Underwear", "Tanktops/T-Shirts"], // every list 0
-  ["Shorts", "Light Pants/Skirt(s)", "Thin Socks", "Sandals", "Brimmed Hat"], // 1 hot and temperate
+  var masterList = [["Pairs of Underwear", "Tanktops/T-Shirts"], // every list 0
+  ["Pair(s) of Shorts", "Pair(s) of Light Pants/Skirt(s)", "Thin Socks", "Sandals", "Brimmed Hat"], // 1 hot and temperate
   ["Light Jacket"], // temperate 2
-  ["Comfortable Walking Shoes", "Jeans", "Long Sleeve Shirt(s)"], // temperate and cold 3
-  ["Thermal Shirt(s) and Pant(s)", "Sweater(s)", "Thick Socks", "Weatherproof Boots", "Heavy Coat", "Gloves",  "Scarves", "Winter Hat"]]; //cold 4
-  var tripList = [masterList[0]];
+  ["Comfortable Walking Shoes", "Pair(s) of Jeans", "Long Sleeved Shirt(s)"], // temperate and cold 3
+  ["Thermal Shirt(s) and Pant(s)", "Sweater(s)", "Thick Socks", "Weatherproof Boots", "Heavy Coat", "Gloves",  "Scarf", "Winter Hat"]]; //cold 4
+  var tripList = [];
+
   for (i = 0; i < this.temperature.length; i++) {
     if (this.temperature[i] === "hot") {
-        if(tripList.indexOf(masterList[1]) === -1) {
-          tripList.push(masterList[1]);
-        }
+      if(tripList.indexOf(masterList[1]) === -1) {
+        tripList.push(masterList[1]);
+      }
+    }
+
+    if (this.temperature[i] === "temperate") {
+      if(tripList.indexOf(masterList[1]) === -1) {
+        tripList.push(masterList[1]);
       }
 
-      if (this.temperature[i] === "temperate") {
-        if(tripList.indexOf(masterList[1]) === -1) {
-          tripList.push(masterList[1]);
-        }
-
-        if(tripList.indexOf(masterList[3]) === -1) {
-          tripList.push(masterList[3]);
-        }
-        tripList.push(masterList[2]);
+      if(tripList.indexOf(masterList[3]) === -1) {
+        tripList.push(masterList[3]);
       }
+      tripList.push(masterList[2]);
+    }
 
-      if (this.temperature[i] === "cold") {
-        if(tripList.indexOf(masterList[3]) === -1) {
-          tripList.push(masterList[3]);
-        }
-        tripList.push(masterList[4]);
+    if (this.temperature[i] === "cold") {
+      if(tripList.indexOf(masterList[3]) === -1) {
+        tripList.push(masterList[3]);
       }
+      tripList.push(masterList[4]);
+    }
+  }
+
+  if (tripList.length > 0) {
+    tripList.push(masterList[0]);
   }
 
   return [].concat.apply([], tripList);
@@ -72,7 +77,7 @@ Weather.prototype.rainChance = function() {
 Trip.prototype.numberOfItems = function(item) {
   var output = 0;
 
-      if (item === "Underwear" || item === "Thin Socks") {
+      if (item === "Pairs of Underwear" || item === "Thin Socks") {
         output = 4;
       }
 
@@ -80,11 +85,11 @@ Trip.prototype.numberOfItems = function(item) {
         output = 3;
       }
 
-      if (item === "Thick Socks" || item === "Long Sleeved Shirts") {
+      if (item === "Thick Socks" || item === "Long Sleeved Shirt(s)") {
         output = 2;
       }
 
-      if (item === "Shorts" || item === "Light Pants/Skirt(s)" || item === "Jeans" || item === "Thermal Shirt(s) and Pant(s)" || item === "Sweater(s)") {
+      if (item === "Pair(s) of Shorts" || item === "Pair(s) of Light Pants/Skirt(s)" || item === "Pair(s) of Jeans" || item === "Thermal Shirt(s) and Pant(s)" || item === "Sweater(s)") {
         output = 1;
       }
       if (this.bag === "medium" && output !== 0) {
@@ -135,7 +140,6 @@ $(function() {
     var listArray = newWeather.core();
 
     var num = newTrip.numberOfItems(listArray);
-    console.log(num);
 
     var output = '';
     listArray.forEach(function(item) {
@@ -146,15 +150,27 @@ $(function() {
     $("#working-list").html(output);
 
 
+
   });// end .change method
 
-  $("#destination").keyup(function() {
-
-    destination = $(this).val();
-
+  $("#submit-button").click(function(e) {
+    e.preventDefault();
+    destination = $("#destination").val();
+    $(".question-two").fadeIn(600);
     $("#list-head").html(destination);
 
   });
+
+  $(".checkbox").click(function() {
+    $(".question-three").fadeIn(600);
+
+  });
+
+  $("#rainy").click(function() {
+    $(".question-four").fadeIn(600);
+
+  });
+  // Smooth scoll effect from top
 
   $("#adventure-button").click(function() {
     $("html,body").animate({

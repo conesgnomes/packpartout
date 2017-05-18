@@ -179,9 +179,9 @@ strong {
   width: 60%;
 }
 
-/*.question-three, .question-four, #submit {
+.question-two, .question-three, .question-four {
   display: none;
-}*/
+}
 
 hr {
   border-top: solid rgba(212, 216, 189, .5) 1px;
@@ -204,10 +204,6 @@ hr {
   letter-spacing: 2px;
   font-weight: 700;
   color: rgb(220, 134, 55);
-}
-
-#working-list {
-  /*display: none;*/
 }
 
 ul {
