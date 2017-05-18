@@ -245,6 +245,7 @@ input[type='radio'] + label:before {
   font-family: FontAwesome;
   padding-right: 5px;
   width: 50px;
+  font-size: 1.3em;
 }
 
 input[type=radio] + label:before {
