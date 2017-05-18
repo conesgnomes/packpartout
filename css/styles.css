@@ -129,7 +129,7 @@ strong {
   font-weight: 700;
   letter-spacing: 2px;
   color: rgb(220, 134, 55);
-  font-size: 3.2em;
+  font-size: 3.1em;
 
 }
 
@@ -191,13 +191,13 @@ hr {
   margin: 0 6%;
 }
 
-input[type="checkbox"] {
+/*input[type="checkbox"] {
   transform:scale(1.6, 1.6);
 }
 
 input[type="radio"] {
   transform:scale(1.2, 1.2);
-}
+}*/
 
 #temp, #rainy, #bag-size {
   font-size: 1.2em;
@@ -232,6 +232,46 @@ input[type="radio"] {
   transition: .5s;
 }
 
+/*** Custom checkboxes ***/
+
+input[type=radio],
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox'] + label:before,
+input[type='radio'] + label:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  padding-right: 5px;
+  width: 50px;
+  font-size: 1.3em;
+}
+
+input[type=radio] + label:before {
+  content: "\f1db"; /* Radio unchecked */
+}
+
+input[type=radio]:checked + label:before {
+  content: "\f058"; /* Radio checked */
+  color: #dc8637;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\f096"; /* Checkbox unchecked */
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\f046"; /* Checkbox checked */
+  color: #dc8637;
+}
+
+.radio label,
+.checkbox label {
+  padding-left: 0;
+}
+
+/* MEDIA QUERIES*/
 /*Hide subtitle*/
 
 @media only screen and (min-width: 1024px) {
