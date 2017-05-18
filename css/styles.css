@@ -207,7 +207,8 @@ hr {
 /*PACKING LIST AREA*/
 
 #list-head {
-  margin-top: 2%;
+  margin-top: 5%;
+  margin-bottom: 2%;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
@@ -249,9 +250,13 @@ ul {
   transition: .5s;
 }
 
+.luggage-icon {
+  width: 70px;
+}
+
 /*** Custom checkboxes ***/
 
-input[type=radio],
+input[type='radio'],
 input[type='checkbox'] {
   display: none;
 }
