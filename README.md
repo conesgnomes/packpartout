@@ -8,15 +8,18 @@
 
  | Behavior                                                  |  Input | Output    |
  | --------------------------------------------------------- | ------ | --------- |
- | User clicks "LET'S GO!" and is directed to first question "Where are you headed?"    | Clicks button | Directed to quiz |
- | User types in destination, then clicks "GET PACKING!", then destination and question 2 appears| "Timbuktu" | "Timbuktu" will appear at the bottom of the form, with question 2 appearing above the destination |
- | User answers question 2, "What will the temperature be on your trip?", and selects one, two, or all options | "Hot"  | "Hot" packing list will appear below destination and question 3 will appear |
- | User answers question 3 "Might it rain on your travels?", selects only one option, and it will show either "Don't forget to pack an umbrella and rain jacket!" or "Check the weather just in case it might rain, okay?" | "No" | "Check the weather just in case it might rain, okay?" will appear below the packing list, with question 4 appearing  |
-  | User answers question 4 "How big is your bag?" and packing items will not increase or increase by 2 or 3, depending on small, medium, or large size luggage | "Large" | Base list will increase by 3 items |
+ | User clicks "LET'S GO!" and is directed to first question "Where are you headed?"    | Clicks "LET'S GO!" | Directed to quiz |
+ | User types in destination, then clicks "GET PACKING!" -- destination header and question 2 regarding temperature appears| "Timbuktu" | "Timbuktu" appears at bottom of the form; question 2 appears below "GET PACKING!" button |
+ | User answers question 2 by selecting one, two, or all options | "Hot"  | "Hot" packing list will appear below destination header and question 3 regarding humidity appears |
+ | User answers question 3 by selecting only one option, and packing list is appended reminding user to pack rain gear | "No" | "Check the weather just in case it might rain, okay?" will appear below the packing list, and question 4 regarding preferred luggage size appears |
+  | User answers question 4 and packing list item quantities will adjust dynamically depending on user input | "Large" | Packing list item quantities will increase by 3 items (if user selects "Medium" packing list item quantities will increase by 2; if user selects "Small" packing list item quantities will not change) |
 
 ## Screenshots of Application
 
+Landing Page
 ![alt text](https://github.com/conesgnomes/packpartout/blob/master/img/landing-page.png?raw=true)
+
+Destination Quiz
 ![alt text](https://github.com/conesgnomes/packpartout/blob/master/img/quiz-page.png?raw=true)
 
 ## Setup/Installation Requirements
