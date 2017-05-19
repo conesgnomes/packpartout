@@ -8,7 +8,7 @@
 
  | Behavior                                                  |  Input | Output    |
  | --------------------------------------------------------- | ------ | --------- |
- | User clicks "LET'S GO!" and is directed to first question "Where are you headed?"    | Clicks "LET'S GO!" | Directed to quiz |
+ | User clicks "LET'S GO!" and is directed to first question "Where are you headed?"    | "LET'S GO!" | Directed to quiz |
  | User types in destination, then clicks "GET PACKING!" -- destination header and question 2 regarding temperature appears| "Timbuktu" | "Timbuktu" appears at bottom of the form; question 2 appears below "GET PACKING!" button |
  | User answers question 2 by selecting one, two, or all options | "Hot"  | "Hot" packing list will appear below destination header and question 3 regarding humidity appears |
  | User answers question 3 by selecting only one option, and packing list is appended reminding user to pack rain gear | "No" | "Check the weather just in case it might rain, okay?" will appear below the packing list, and question 4 regarding preferred luggage size appears |
